@@ -34,3 +34,26 @@ int s2/0
 ip nat outside
 
 then static connection
+
+
+VLAN:
+
+vlan 2
+name office
+exit
+vlan 3
+name home
+exit
+
+interface fastEthernet 0/1
+switchport access vlan 2
+exit
+interface fastEthernet 0/2
+switchport access vlan 2
+exit
+interface fastEthernet 0/3
+switchport access vlan 3
+exit
+interface fastEthernet 0/4
+switchport access vlan 3
+exit
